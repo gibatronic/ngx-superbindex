@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "make-help": "^1.0.1",
+    "mustache": "^2.2.1",
+    "node-sass": "^3.8.0",
+    "uglify-js": "^2.7.0",
+    "vigilia": "^1.0.0"
+  },
+  "private": true,
+  "version": "0.0.0"
+}

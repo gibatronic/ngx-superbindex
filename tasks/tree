@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+main() {
+  mkdir -p public
+}
+
+. tasks/mixins/execute

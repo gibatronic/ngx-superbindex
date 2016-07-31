@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+main() {
+  rm -fr public
+  rm -f npm-debug.log
+}
+
+. tasks/mixins/execute

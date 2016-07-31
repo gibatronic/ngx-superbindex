@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+main() {
+  local DATA='{"script": "%s", "style": "%s"}'
+  local SCRIPT=$(node_modules/.bin/uglifyjs client/scripts/main.js | sed 's/"/\\"/g')
+  local STYLE=$(node_modules/.bin/node-sass --output-style compressed client/styles/main.scss | sed 's/"/\\"/g')
+
+  printf "$DATA" "$SCRIPT" "$STYLE" | node_modules/.bin/mustache - client/templates/main.xslt > public/main.xslt
+}
+
+. tasks/mixins/execute

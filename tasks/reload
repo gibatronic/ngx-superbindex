@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+main() {
+  nginx -s reload
+}
+
+. tasks/mixins/execute

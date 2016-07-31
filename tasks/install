@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+main() {
+  if ! type npm &> /dev/null; then
+    echo 'Please, make sure you have Node and npm installed.'
+    echo 'You may get them at https://nodejs.org/'
+
+    return 1
+  fi
+
+  npm install
+}
+
+. tasks/mixins/execute
