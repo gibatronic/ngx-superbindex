@@ -1,0 +1,72 @@
+// Color theme by the Base16 project:
+// https://chriskempson.github.io/base16/#eighties
+
+$base00: #2d2d2d;
+$base01: #393939;
+$base02: #515151;
+$base03: #747369;
+$base04: #a09f93;
+$base05: #d3d0c8;
+$base06: #e8e6df;
+$base07: #f2f0ec;
+$base08: #f2777a;
+$base09: #f99157;
+$base0A: #ffcc66;
+$base0B: #99cc99;
+$base0C: #66cccc;
+$base0D: #6699cc;
+$base0E: #cc99cc;
+$base0F: #d27b53;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 3.5rem;
+}
+
+html {
+  background-color: $base00;
+  color: $base05;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 16px;
+}
+
+.list {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  &__item {
+    display: block;
+
+    &--directory + &--file {
+      margin-top: 1rem;
+    }
+  }
+
+  &__link {
+    display: block;
+    line-height: 0.45;
+    outline: 0;
+    padding-top: 0.5rem;
+    padding-bottom: calc(0.5rem + 0.125em);
+    text-decoration: none;
+    transition: color 0.025s linear;
+
+    &--directory {
+      color: $base0D;
+    }
+
+    &--file {
+      color: $base05;
+    }
+
+    &--active {
+      color: $base0E;
+    }
+  }
+}
