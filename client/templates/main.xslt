@@ -9,7 +9,10 @@
     <html>
       <head>
         <title>superbindex</title>
+
+        <meta name="version" conent="{{version}}" />
         <meta name="viewport" conent="initial-scale=1, minimum-scale=1, shrink-to-fit=no, width=device-width" />
+
         <style><![CDATA[{{{style}}}]]></style>
       </head>
       <body>
