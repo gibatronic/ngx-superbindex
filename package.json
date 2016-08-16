@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "browserify": "^13.1.0",
     "make-help": "^1.0.1",
     "mustache": "^2.2.1",
     "node-sass": "^3.8.0",
