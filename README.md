@@ -18,7 +18,7 @@ brew install nginx-full --with-xslt
 
 ## Usage
 
-1. Download [`superbindex.xslt`](https://github.com/gibatronic/ngx-superbindex/releases/download/v1.0.1/superbindex.xslt) into your root directory.
+1. Download [`superbindex.xslt`](https://github.com/gibatronic/ngx-superbindex/releases/download/v1.1.0/superbindex.xslt) into your root directory.
 
 2. Add the following lines to your `nginx.conf` location:
    ```nginx
