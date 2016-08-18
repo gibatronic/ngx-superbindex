@@ -11,6 +11,7 @@ var Item = function(properties) {
 Item.prototype = {
   $item: undefined,
   $link: undefined,
+  highlighted: false,
 
   activate: function() {
     this.active = true;
@@ -85,6 +86,20 @@ Item.prototype = {
     });
 
     return this;
+  },
+
+  highlight: function(letters) {
+    this.highlighted = letters.length != 0 && this.name.toLowerCase().indexOf(letters) == 0;
+
+    if (this.highlighted) {
+      var regExp = new RegExp('^(' + letters + ')', 'i');
+      var template = '<mark class="list__highlight">$1</mark>';
+
+      this.$link.innerHTML = this.name.replace(regExp, template);
+      this.$link.focus();
+    } else {
+      this.$link.textContent = this.name;
+    }
   },
 
   initialize: function(properties) {
