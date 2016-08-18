@@ -40,6 +40,12 @@ html {
   padding: 0;
   height: 100%;
 
+  &__highlight {
+    background-color: $base0A;
+    border-radius: 2px;
+    color: $base00;
+  }
+
   &__item {
     display: block;
 
@@ -68,5 +74,9 @@ html {
     &--active {
       color: $base0E;
     }
+  }
+
+  &__link--active > &__highlight {
+    background-color: $base0E;
   }
 }
