@@ -5,6 +5,7 @@ Like [ngx-autoindex](http://nginx.org/en/docs/http/ngx_http_autoindex_module.htm
 * Theme by [base16](https://chriskempson.github.io/base16/#eighties)
 * Monospaced type
 * Minimal UI
+* Search as you type
 
 ## Requirements
 
