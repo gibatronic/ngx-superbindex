@@ -1,3 +1,5 @@
+![demo](http://i.giphy.com/FYXDf8VQ89ljq.gif)
+
 # ngx-superbindex
 
 Like [ngx-autoindex](http://nginx.org/en/docs/http/ngx_http_autoindex_module.html), but superb!
