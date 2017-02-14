@@ -1,4 +1,4 @@
-![demo](http://i.giphy.com/FYXDf8VQ89ljq.gif)
+<a><img src="http://i.giphy.com/l3q2DPYaC29FsXEhW.gif" width="540" height="437"></a>
 
 # ngx-superbindex
 
