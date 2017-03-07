@@ -3,8 +3,6 @@
 echo ''
 echo '  Usage:'
 echo '    make <target>'
-echo '    make run [PORT=<number>]'
-echo '    make run-and-watch [PORT=<number>]'
 echo ''
 echo '  Targets:'
 node_modules/.bin/make-help -p 4 Makefile
