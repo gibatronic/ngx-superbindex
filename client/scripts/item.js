@@ -18,8 +18,8 @@ Item.prototype = {
   },
 
   bindEvents: function() {
-    this.$link.addEventListener('focusin', this.activate);
-    this.$link.addEventListener('focusout', this.deactivate);
+    this.$link.addEventListener('focus', this.activate);
+    this.$link.addEventListener('blur', this.deactivate);
     this.$link.addEventListener('mouseenter', this.activate);
     this.$link.addEventListener('mouseleave', this.deactivate);
   },
