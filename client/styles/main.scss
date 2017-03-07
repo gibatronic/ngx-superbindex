@@ -58,10 +58,13 @@ html {
     display: block;
     line-height: 0.45;
     outline: 0;
+    overflow: hidden;
     padding-top: 0.5rem;
     padding-bottom: calc(0.5rem + 0.125em);
     text-decoration: none;
+    text-overflow: ellipsis;
     transition: color 0.025s linear;
+    white-space: nowrap;
 
     &--directory {
       color: $base0D;
