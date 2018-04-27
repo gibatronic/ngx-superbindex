@@ -1,15 +1,15 @@
 {
   "devDependencies": {
-    "browserify": "^13.1.0",
-    "make-help": "^1.0.1",
-    "mustache": "^2.2.1",
-    "node-sass": "^3.8.0",
-    "uglify-js": "^2.7.0",
-    "vigilia": "^1.0.0"
+    "browserify": "16.2.0",
+    "make-help": "1.0.2",
+    "mustache": "2.3.0",
+    "node-sass": "4.9.0",
+    "uglify-js": "3.3.22",
+    "vigilia": "1.0.0"
   },
   "engines": {
-    "node": "^4.0.0",
-    "npm": "^2.14.2"
+    "node": "^8.5.0",
+    "npm": "^5.2.0"
   },
   "private": true,
   "version": "1.1.1"
