@@ -2,11 +2,11 @@
 
 main() {
   local DATA='{"script": "%s", "style": "%s", "version": "%s"}'
-  local SCRIPT=$(node_modules/.bin/browserify client/scripts/main.js | node_modules/.bin/uglifyjs | sed 's/"/\\"/g')
-  local STYLE=$(node_modules/.bin/node-sass --output-style compressed client/styles/main.scss | sed 's/"/\\"/g')
+  local SCRIPT=$(npx browserify client/scripts/main.js | npx uglifyjs | sed 's/"/\\"/g')
+  local STYLE=$(npx node-sass --output-style compressed client/styles/main.scss | sed 's/"/\\"/g')
   local VERSION=$(node -e 'require("./package").version' -p)
 
-  printf "$DATA" "$SCRIPT" "$STYLE" "$VERSION" | node_modules/.bin/mustache - client/templates/main.xslt > public/main.xslt
+  printf "$DATA" "$SCRIPT" "$STYLE" "$VERSION" | npx mustache - client/templates/main.xslt > public/main.xslt
   return $?
 }
 

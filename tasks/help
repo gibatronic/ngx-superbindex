@@ -5,5 +5,5 @@ echo '  Usage:'
 echo '    make <target>'
 echo ''
 echo '  Targets:'
-node_modules/.bin/make-help -p 4 Makefile
+npx make-help -p 4 Makefile
 echo ''
