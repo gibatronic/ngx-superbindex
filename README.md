@@ -14,6 +14,7 @@ Like [ngx-autoindex](http://nginx.org/en/docs/http/ngx_http_autoindex_module.htm
 [nginx](http://nginx.org/) with the [xslt](http://nginx.org/en/docs/http/ngx_http_xslt_module.html) module. On Mac with [Homebrew](http://brew.sh/) it's as easy as:
 
 ```bash
+brew tap denji/nginx
 brew install nginx-full --with-xslt
 ```
 
