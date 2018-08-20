@@ -3,9 +3,8 @@
     "browserify": "16.2.0",
     "make-help": "1.0.2",
     "mustache": "2.3.0",
-    "node-sass": "4.9.0",
-    "uglify-js": "3.3.22",
-    "vigilia": "1.0.0"
+    "node-sass": "^4.9.3",
+    "uglify-js": "3.3.22"
   },
   "engines": {
     "node": "^8.5.0",

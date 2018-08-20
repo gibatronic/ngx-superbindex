@@ -5,8 +5,7 @@
 				help \
 				install \
 				reload \
-				tree \
-				watch
+				tree
 
 .SILENT:
 
@@ -33,7 +32,3 @@ reload:
 # generate the public file tree
 tree:
 	tasks/tree
-
-# build whenever something changes
-watch:
-	tasks/watch
