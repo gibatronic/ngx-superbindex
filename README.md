@@ -24,7 +24,7 @@ brew install nginx-full --with-xslt
 
 2. Add the following lines to your `nginx.conf` location:
    ```nginx
-   location / {
+   location ~ /$ {
        autoindex on;
        autoindex_format xml;
 
