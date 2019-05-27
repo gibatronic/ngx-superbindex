@@ -1,6 +1,8 @@
 <a><img src="http://i.giphy.com/l3q2DPYaC29FsXEhW.gif" width="540" height="437"></a>
 
 # ngx-superbindex
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgibatronic%2Fngx-superbindex.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgibatronic%2Fngx-superbindex?ref=badge_shield)
+
 
 Like [ngx-autoindex](http://nginx.org/en/docs/http/ngx_http_autoindex_module.html), but superb!
 
@@ -33,3 +35,7 @@ brew install nginx-full --with-xslt
    ```
 
 3. Restart nginx with `nginx -s reload` and *voilà*!
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgibatronic%2Fngx-superbindex.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgibatronic%2Fngx-superbindex?ref=badge_large)
