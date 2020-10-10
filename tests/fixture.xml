@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet href="../public/main.xslt" type="text/xsl" ?>
+<list>
+    <directory mtime="1970-01-01T00:00:00.000Z">phasellus</directory>
+    <directory mtime="1970-01-01T00:00:00.000Z">fusce</directory>
+    <directory mtime="1970-01-01T00:00:00.000Z">orci</directory>
+    <file mtime="1970-01-01T00:00:00.000Z" size="42">sed</file>
+    <file mtime="1970-01-01T00:00:00.000Z" size="42">etiam</file>
+    <file mtime="1970-01-01T00:00:00.000Z" size="42">pellentesque</file>
+</list>

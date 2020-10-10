@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+clean() {
+	kill $(jobs -pr)
+	wait
+}
+
+main() {
+	trap 'clean' 'SIGINT' 'SIGTERM'
+
+	local commands=(
+		'ENVIRONMENT=development'
+		'make build reload;'
+		'echo watching… '
+	)
+
+	npx chokidar 'client' --command "${commands[*]}" --initial --silent &
+	wait
+	return 0
+}
+
+main

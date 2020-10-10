@@ -1,15 +1,14 @@
 {
-  "devDependencies": {
-    "browserify": "16.2.0",
-    "make-help": "1.0.2",
-    "mustache": "2.3.0",
-    "node-sass": "^4.9.3",
-    "uglify-js": "3.3.22"
-  },
-  "engines": {
-    "node": "^8.5.0",
-    "npm": "^5.2.0"
-  },
-  "private": true,
-  "version": "1.1.1"
+    "devDependencies": {
+        "chokidar-cli": "^2.1.0",
+        "jasmine": "^3.6.1",
+        "make-help": "1.0.2",
+        "mustache": "^4.0.1",
+        "puppeteer": "^5.3.1",
+        "rollup": "^2.26.11",
+        "sass": "^1.26.10",
+        "terser": "^5.3.1"
+    },
+    "private": true,
+    "version": "1.1.1"
 }

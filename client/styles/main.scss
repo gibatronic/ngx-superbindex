@@ -1,85 +1,113 @@
-// Color theme by the Base16 project:
-// https://chriskempson.github.io/base16/#eighties
+:root {
+    --color-base00: #FFFFFF;
+    --color-base07: #202020;
+    --color-base0D: #3777E6;
+    --color-base0E: #AD00A1;
 
-$base00: #2d2d2d;
-$base01: #393939;
-$base02: #515151;
-$base03: #747369;
-$base04: #a09f93;
-$base05: #d3d0c8;
-$base06: #e8e6df;
-$base07: #f2f0ec;
-$base08: #f2777a;
-$base09: #f99157;
-$base0A: #ffcc66;
-$base0B: #99cc99;
-$base0C: #66cccc;
-$base0D: #6699cc;
-$base0E: #cc99cc;
-$base0F: #d27b53;
+    --theme-background: var(--color-base00);
+    --theme-link-directory: var(--color-base0D);
+    --theme-link-file: var(--color-base07);
+    --theme-link-highlight: var(--color-base0E);
+    --theme-link-hover: var(--color-base0E);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-base00: #2D2D2D;
+        --color-base07: #F2F0EC;
+        --color-base0D: #6699CC;
+        --color-base0E: #CC99CC;
+    }
+}
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 3.5rem;
+    margin: 3.5rem;
 }
 
 html {
-  background-color: $base00;
-  color: $base05;
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  font-size: 16px;
+    background-color: var(--theme-background);
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-size: 100%;
 }
 
-.list {
-  display: block;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-
-  &__highlight {
-    background-color: $base0A;
-    border-radius: 2px;
-    color: $base00;
-  }
-
-  &__item {
-    display: block;
-
-    &--directory + &--file {
-      margin-top: 1rem;
-    }
-  }
-
-  &__link {
-    display: block;
-    line-height: 0.45;
-    outline: 0;
-    overflow: hidden;
-    padding-top: 0.5rem;
-    padding-bottom: calc(0.5rem + 0.125em);
-    text-decoration: none;
-    text-overflow: ellipsis;
-    transition: color 0.025s linear;
-    white-space: nowrap;
-
-    &--directory {
-      color: $base0D;
+.asset {
+    &-list {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
-    &--file {
-      color: $base05;
+    &-item {
+        display: block;
+
+        &--directory {
+            color: var(--theme-link-directory);
+        }
+
+        &--file {
+            color: var(--theme-link-file);
+        }
+
+        &--directory + &--file {
+            margin-top: 1rem;
+        }
     }
 
-    &--active {
-      color: $base0E;
-    }
-  }
+    &-link {
+        display: block;
+        line-height: 1.7;
+        opacity: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: color 100ms, opacity 100ms;
+        white-space: nowrap;
 
-  &__link--active > &__highlight {
-    background-color: $base0E;
-  }
+        &:any-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        &:focus,
+        &:hover {
+            color: var(--theme-link-hover);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-mark {
+        position: relative;
+        background-color: transparent;
+        color: var(--theme-link-highlight);
+        display: inline-block;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            background-color: var(--theme-link-highlight);
+            border-radius: 1px;
+            content: '';
+            transform: translateY(-50%) translateY(0.5em);
+            width: auto;
+            height: 2px;
+        }
+    }
+
+    &-item--filtered > &-link {
+        opacity: 0.4;
+
+        &:focus,
+        &:hover {
+            opacity: 1;
+        }
+    }
 }

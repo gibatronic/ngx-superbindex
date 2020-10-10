@@ -2,19 +2,20 @@
 
 ## Requirements
 
-* `darwin` or `linux` operating system
-* Node.js `v4+` with npm `v2+`
+* A `darwin` or `linux` operating system
+* Node.js `v14+` with npm `v6+`
 
 ## Structure
 
 ```tree
 .
 ├── client .......... source folder
-│   ├── scripts ..... JavaScript files
+│   ├── scripts ..... JS files
 │   ├── styles ...... SASS files
 │   └── templates ... XSLT files
 ├── public .......... distribution folder
-└── tasks ........... project tasks
+├── tasks ........... project tasks
+└── tests ........... test scripts
 ```
 
 ## Setup

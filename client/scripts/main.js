@@ -1,12 +1,11 @@
-var helper = require('./helper');
-var List = require('./list');
+import AssetLink from './asset-link'
+import AssetItem from './asset-item'
+import AssetList from './asset-list'
 
-var main = function() {
-  var list = new List({
-    list: JSON.parse(document.getElementById('data').textContent)
-  });
+function main() {
+    AssetLink.define()
+    AssetItem.define()
+    AssetList.define()
+}
 
-  document.body.appendChild(list.$list);
-};
-
-document.addEventListener('DOMContentLoaded', main);
+document.addEventListener('DOMContentLoaded', main)

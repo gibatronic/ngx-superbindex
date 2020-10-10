@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 main() {
-  nginx -s reload
+	nginx -s reload
 }
 
-. tasks/mixins/execute
+. "$(dirname $0)/run.sh"
