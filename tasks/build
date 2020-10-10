@@ -1,13 +1,56 @@
 #!/usr/bin/env bash
 
-main() {
-  local DATA='{"script": "%s", "style": "%s", "version": "%s"}'
-  local SCRIPT=$(npx browserify client/scripts/main.js | npx uglifyjs | sed 's/"/\\"/g')
-  local STYLE=$(npx node-sass --output-style compressed client/styles/main.scss | sed 's/"/\\"/g')
-  local VERSION=$(node -e 'require("./package").version' -p)
-
-  printf "$DATA" "$SCRIPT" "$STYLE" "$VERSION" | npx mustache - client/templates/main.xslt > public/main.xslt
-  return $?
+development_environment() {
+	[ "$ENVIRONMENT" = 'development' ]
 }
 
-. tasks/mixins/execute
+replace() {
+	WHAT=$1 WITH=$(cat "$2") ruby -p -e 'gsub(ENV["WHAT"], ENV["WITH"])'
+}
+
+script() {
+	local output=$(mktemp)
+
+	npx rollup --input client/scripts/main.js --preferConst --silent > "$output"
+	[ "$?" != '0' ] && return "$?"
+
+	if ! development_environment; then
+		local buffer=$(mktemp)
+
+		npx terser --keep-classnames --keep-fnames < "$output" > "$buffer"
+		[ "$?" != '0' ] && return "$?"
+		mv "$buffer" "$output"
+	fi
+
+	replace '{{script}}' "$output"
+}
+
+style() {
+	local options=()
+	local output=$(mktemp)
+
+	if ! development_environment; then
+		options+=('--style=compressed')
+	fi
+
+	npx sass "${options[@]}" 'client/styles/main.scss' > "$output"
+	[ "$?" != '0' ] && return "$?"
+	replace '{{style}}' "$output"
+}
+
+version() {
+	local output=$(mktemp)
+
+	node -e 'require("./package").version' -p > "$output"
+	[ "$?" != '0' ] && return "$?"
+	replace '{{style}}' "$output"
+}
+
+main() {
+	local input='client/templates/main.xslt'
+	local output='public/main.xslt'
+
+	script < "$input" | style | version > "$output"
+}
+
+. "$(dirname $0)/run.sh"

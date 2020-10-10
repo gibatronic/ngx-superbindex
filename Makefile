@@ -1,17 +1,25 @@
 .DEFAULT_GOAL := help
 
 .PHONY: build \
-				clean \
-				help \
-				install \
-				reload \
-				tree
+		ci \
+		clean \
+		help \
+		install \
+		reload \
+		test \
+		tree \
+		watch
 
 .SILENT:
 
 # generate assets
 build: tree
 	tasks/build
+
+# continuous integration
+ci: install \
+	build \
+	test
 
 # clean generated assets
 clean:
@@ -29,6 +37,14 @@ install:
 reload:
 	tasks/reload
 
+# run tests
+test:
+	tasks/test
+
 # generate the public file tree
 tree:
 	tasks/tree
+
+# generate assets on asset changes
+watch:
+	tasks/watch

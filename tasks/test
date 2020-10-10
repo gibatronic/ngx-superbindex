@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 main() {
-    mkdir -p public
+	npx jasmine --config=jasmine.json
 }
 
 . "$(dirname $0)/run.sh"
