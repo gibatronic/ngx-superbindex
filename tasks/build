@@ -43,12 +43,12 @@ version() {
 
 	node -e 'require("./package").version' -p > "$output"
 	[ "$?" != '0' ] && return "$?"
-	replace '{{style}}' "$output"
+	replace '{{version}}' "$output"
 }
 
 main() {
 	local input='client/templates/main.xslt'
-	local output='public/main.xslt'
+	local output='public/superbindex.xslt'
 
 	script < "$input" | style | version > "$output"
 }
