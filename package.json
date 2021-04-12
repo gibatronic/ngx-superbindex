@@ -3,7 +3,7 @@
         "chokidar-cli": "^2.1.0",
         "jasmine": "^3.6.3",
         "make-help": "1.0.2",
-        "mustache": "^4.0.1",
+        "mustache": "^4.2.0",
         "puppeteer": "^8.0.0",
         "rollup": "^2.45.1",
         "sass": "^1.32.8",
