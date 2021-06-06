@@ -4,7 +4,7 @@
         "jasmine": "^3.7.0",
         "make-help": "1.0.2",
         "mustache": "^4.2.0",
-        "puppeteer": "^9.1.1",
+        "puppeteer": "^10.0.0",
         "rollup": "^2.50.5",
         "sass": "^1.32.12",
         "terser": "^5.7.0"
