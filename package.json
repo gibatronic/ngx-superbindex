@@ -7,7 +7,7 @@
         "puppeteer": "^10.4.0",
         "rollup": "^2.56.3",
         "sass": "^1.42.1",
-        "terser": "^5.7.2"
+        "terser": "^5.9.0"
     },
     "private": true,
     "version": "2.0.0"
