@@ -9,17 +9,21 @@ export default class AssetLink extends CustomElement(HTMLAnchorElement) {
     highlight(highlightedGraphemes) {
         const regExp = new RegExp(`^(${highlightedGraphemes})`, 'iu')
 
-        this.highlighted = highlightedGraphemes !== '' && regExp.test(this.url)
+        this.highlighted = highlightedGraphemes !== '' && regExp.test(this.name)
 
         if (this.highlighted) {
             const template = '<mark class="asset-mark">$1</mark>'
 
-            this.innerHTML = this.url.replace(regExp, template)
+            this.innerHTML = this.name.replace(regExp, template)
         } else {
-            this.textContent = this.url
+            this.textContent = this.name
         }
 
         this.classList.toggle('asset-link--highlighted', this.highlighted)
+    }
+
+    get name() {
+        return this.dataset.name
     }
 
     get type() {
@@ -32,9 +36,5 @@ export default class AssetLink extends CustomElement(HTMLAnchorElement) {
         }
 
         return ''
-    }
-
-    get url() {
-        return this.getAttribute('href')
     }
 }
