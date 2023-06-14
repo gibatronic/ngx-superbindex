@@ -6,7 +6,7 @@
         "mustache": "^4.2.0",
         "puppeteer": "^19.8.5",
         "rollup": "^3.20.2",
-        "sass": "^1.58.3",
+        "sass": "^1.62.1",
         "terser": "^5.16.9"
     },
     "private": true,
