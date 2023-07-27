@@ -1,4 +1,5 @@
 {
+    "name": "ngx-superbindex",
     "version": "2.0.1",
     "devDependencies": {
         "chokidar-cli": "^3.0.0",
