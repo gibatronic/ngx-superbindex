@@ -9,7 +9,7 @@
         "puppeteer": "^21.4.1",
         "rollup": "^4.1.4",
         "sass": "^1.68.0",
-        "terser": "^5.22.0"
+        "terser": "^5.26.0"
     },
     "engines": {
         "node": "^18.16.1",
