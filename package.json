@@ -7,7 +7,7 @@
         "make-help": "1.0.2",
         "mustache": "^4.2.0",
         "puppeteer": "^22.7.1",
-        "rollup": "^4.14.0",
+        "rollup": "^4.17.2",
         "sass": "^1.76.0",
         "terser": "^5.31.0"
     },
