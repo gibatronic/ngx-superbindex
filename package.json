@@ -6,7 +6,7 @@
         "jasmine": "^5.3.0",
         "make-help": "1.0.2",
         "mustache": "^4.2.0",
-        "puppeteer": "^23.4.1",
+        "puppeteer": "^23.6.1",
         "rollup": "^4.23.0",
         "sass": "^1.79.4",
         "terser": "^5.36.0"
