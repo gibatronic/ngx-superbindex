@@ -8,7 +8,12 @@ let page = undefined
 describe('ngx-superbindex', () => {
     beforeAll(async () => {
         browser = await puppeteer.launch({
-            args: ['--allow-file-access-from-files']
+            args: [
+                '--allow-file-access-from-files',
+                '--disable-setuid-sandbox',
+                '--no-sandbox',
+            ],
+            headless: true,
         })
 
         page = await browser.newPage()
