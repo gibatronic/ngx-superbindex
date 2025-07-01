@@ -3,7 +3,7 @@
     "version": "2.0.1",
     "devDependencies": {
         "chokidar-cli": "^3.0.0",
-        "jasmine": "^5.7.1",
+        "jasmine": "^5.8.0",
         "make-help": "1.0.2",
         "mustache": "^4.2.0",
         "puppeteer": "^24.10.0",
