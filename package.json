@@ -8,7 +8,7 @@
         "mustache": "^4.2.0",
         "puppeteer": "^24.24.1",
         "rollup": "^4.52.4",
-        "sass": "^1.93.2",
+        "sass": "^1.93.3",
         "terser": "^5.44.0"
     },
     "engines": {
