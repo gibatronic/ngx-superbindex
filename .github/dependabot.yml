@@ -7,6 +7,10 @@ updates:
       day: "saturday"
       time: "03:00"
       timezone: "Europe/Amsterdam"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -14,3 +18,7 @@ updates:
       day: "saturday"
       time: "03:00"
       timezone: "Europe/Amsterdam"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
