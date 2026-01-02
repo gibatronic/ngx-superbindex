@@ -3,12 +3,12 @@
     "version": "2.0.1",
     "devDependencies": {
         "chokidar-cli": "^3.0.0",
-        "jasmine": "^5.12.0",
+        "jasmine": "^5.13.0",
         "make-help": "1.0.2",
         "mustache": "^4.2.0",
-        "puppeteer": "^24.31.0",
-        "rollup": "^4.53.3",
-        "sass": "^1.94.2",
+        "puppeteer": "^24.34.0",
+        "rollup": "^4.54.0",
+        "sass": "^1.97.1",
         "terser": "^5.44.1"
     },
     "engines": {
