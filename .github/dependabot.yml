@@ -18,6 +18,8 @@ updates:
       day: "saturday"
       time: "03:00"
       timezone: "Europe/Amsterdam"
+    ignore:
+      - dependency-name: "puppeteer" # newer versions are bundled with Chrome 145, which no longer supports XSLT needed for tests
     groups:
       npm-dependencies:
         patterns:
